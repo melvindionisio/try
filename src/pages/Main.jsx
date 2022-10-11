@@ -8,6 +8,7 @@ import yes2 from "../memes/yes2.jpg";
 import yes3 from "../memes/yes3.jpg";
 import yes4 from "../memes/yes4.jpg";
 import yes5 from "../memes/yes5.jpg";
+import marry from "../memes/marry.png";
 
 function getWindowSize() {
   const { innerWidth, innerHeight } = window;
@@ -51,7 +52,7 @@ function Main({ memes, standby }) {
   const four = useRef(null);
   const five = useRef(null);
   const six = useRef(null);
-  const messenger = useRef(null);
+  const seven = useRef(null);
 
   const handleHindi = () => {
     setFiveClick(() => fiveClick + 1);
@@ -92,8 +93,9 @@ function Main({ memes, standby }) {
     }, 1000);
 
     setTimeout(() => {
-      messenger.current.click();
-    }, 15000);
+      seven.current.style.opacity = 1;
+      seven.current.style.height = "150px";
+    }, 13000);
   };
 
   const handleEmotions = () => {
@@ -120,17 +122,12 @@ function Main({ memes, standby }) {
     four.current.style.opacity = 0;
     five.current.style.opacity = 0;
     six.current.style.opacity = 0;
+    seven.current.style.opacity = 0;
+    seven.current.style.height = "0px";
   };
 
   return (
     <div className="font-quicksand relative h-screen w-screen flex items-center justify-center">
-      <a
-        href="https://m.me/mlvndnso.dev "
-        className="opacity-0"
-        ref={messenger}
-      >
-        a
-      </a>
       {viewMessage ? (
         <div className="flex flex-col space-y-5 w-10/12 -mt-10 max-w-lg relative items-center">
           <div
@@ -196,6 +193,13 @@ function Main({ memes, standby }) {
         <p className="text-lg font-semibold p-2 px-3 bg-white z-100 border text-red-500 mb-4 uppercase">
           Yieeeeeee! 🫶🖤
         </p>
+
+        <img
+          src={marry}
+          ref={seven}
+          className="absolute transition-all duration-1000 opacity-0  top-1/2 -mt-20 left-50 z-100 h-0"
+          alt=""
+        />
         <img
           src={yes2}
           ref={one}
@@ -223,7 +227,7 @@ function Main({ memes, standby }) {
         <img
           src={yes3}
           ref={five}
-          className=" absolute opacity-0 transition bottom-50 -right-3 h-28"
+          className=" absolute opacity-0 transition bottom-50 z-50 -right-3 h-28"
           alt=""
         />
 

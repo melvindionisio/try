@@ -28,8 +28,8 @@ function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    audio.play();
     if (username === cred.username && password === cred.password) {
+      audio.play();
       navigate("/home");
     } else {
       setPrompt("Mali ata username or password mo haha.");
