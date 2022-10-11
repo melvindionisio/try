@@ -195,12 +195,6 @@ function Main({ memes, standby }) {
         </p>
 
         <img
-          src={marry}
-          ref={seven}
-          className="absolute transition-all duration-1000 opacity-0  top-1/2 -mt-20 left-50 z-100 h-0"
-          alt=""
-        />
-        <img
           src={yes2}
           ref={one}
           className="absolute transition opacity-0  top-5 left-50 h-32"
@@ -231,6 +225,13 @@ function Main({ memes, standby }) {
           alt=""
         />
 
+        <img
+          src={marry}
+          ref={seven}
+          className="absolute transition-all duration-1000 opacity-0  top-1/2 -mt-20 left-50 z-100 h-0"
+          alt=""
+        />
+
         <video width="90%" height="720" ref={vidRef}>
           <source src={uwu} type="video/mp4" />
         </video>
@@ -244,7 +245,7 @@ function Main({ memes, standby }) {
 
         <p
           ref={six}
-          className="opacity-0 text-lg font-semibold p-1 px-3 bg-white z-100 absolute bottom-20 border text-red-600  uppercase shadow-lg"
+          className="opacity-0 text-lg font-semibold p-1 px-3 bg-white z-100 absolute bottom-20 border text-red-600  shadow-lg"
         >
           wavvyuuuu mwuah 💌{" "}
         </p>
