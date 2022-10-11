@@ -9,6 +9,7 @@ import yes3 from "../memes/yes3.jpg";
 import yes4 from "../memes/yes4.jpg";
 import yes5 from "../memes/yes5.jpg";
 import marry from "../memes/marry.jpg";
+import sad from "../memes/sad.mp3";
 
 function getWindowSize() {
   const { innerWidth, innerHeight } = window;
@@ -23,6 +24,8 @@ function Main({ memes, standby }) {
   const [fiveClick, setFiveClick] = useState(0);
   const [showArrow, setShowArrow] = useState(false);
   const [yes, setYes] = useState(false);
+
+  const [audio] = useState(new Audio(sad));
 
   useEffect(() => {
     function handleWindowResize() {
@@ -56,6 +59,7 @@ function Main({ memes, standby }) {
 
   const handleHindi = () => {
     setFiveClick(() => fiveClick + 1);
+    audio.play();
     //screen width
     let xPosition = Math.floor(
       Math.random() * (windowSize.innerWidth - 100) + 1
@@ -71,6 +75,7 @@ function Main({ memes, standby }) {
     handleEmotions();
   };
   const handleOo = () => {
+    audio.pause();
     setYes(true);
     vidRef.current.play();
     setTimeout(() => {
