@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import profile from "../rojean.jpg";
 import { useNavigate } from "react-router-dom";
+import newmessage from "../memes/newmessage.mp3";
 
 function Login() {
   const [pageTransition, setPageTransition] = useState(false);
@@ -12,6 +13,8 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [prompt, setPrompt] = useState("");
+
+  const [audio] = useState(new Audio(newmessage));
 
   useEffect(() => {
     setTimeout(() => {
@@ -25,6 +28,7 @@ function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
+    audio.play();
     if (username === cred.username && password === cred.password) {
       navigate("/home");
     } else {

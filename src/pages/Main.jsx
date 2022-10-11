@@ -93,7 +93,7 @@ function Main({ memes, standby }) {
 
     setTimeout(() => {
       messenger.current.click();
-    }, 10000);
+    }, 15000);
   };
 
   const handleEmotions = () => {
