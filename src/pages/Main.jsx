@@ -139,8 +139,9 @@ function Main({ memes, standby }) {
           <p className="text-sm font-semibold text-red-500">{prompt}</p>
           <img src={randomSad} className="h-36" alt="sad-melvin" />
           <div className="px-4 py-8 bg-gray-100 w-full shadow-inner">
-            <p className="text-center text-lg font-bold">
-              Hi Crush, pwede ba manligaw? 😅
+            <p className="text-center  font-bold">
+              Hi Roj, kung ang english ng baka ay cow, pwede ba 'kong manligaw?
+              😅
             </p>
           </div>
           <div className="flex justify-center space-x-5 w-full font-bold">

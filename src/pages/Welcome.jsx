@@ -48,7 +48,7 @@ function Welcome() {
               : "pb-5 border-b md:border-b-0   md:pr-3 transform translate-y-32 opacity-0 text-center text-lg mb-10 transition duration-500"
           }`}
         >
-          <span className="text-left text-xl  block">Hello,</span>
+          <span className="text-left text-xl  block">Hi Rojean,</span>
           <span className="text-2xl text-left block">Welcome to my life!</span>
           <span className="block text-left text-red-500">charot.</span>
         </p>
