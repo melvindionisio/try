@@ -3,7 +3,7 @@ import Welcome from "./pages/Welcome";
 import Login from "./pages/Login";
 import Main from "./pages/Main";
 
-import standby from "./memes/default.png";
+import standby from "./memes/default.jpeg";
 import meme1 from "./memes/1.png";
 import meme2 from "./memes/2.png";
 import meme3 from "./memes/3.png";

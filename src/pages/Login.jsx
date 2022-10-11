@@ -6,8 +6,8 @@ function Login() {
   const [pageTransition, setPageTransition] = useState(false);
   const [imageTransition, setImageTransition] = useState(false);
   const cred = {
-    username: "Katie",
-    password: "molano-03-27",
+    username: "mlnrjn",
+    password: "rojeanmolano",
   };
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -63,7 +63,7 @@ function Login() {
             className="px-3 py-3 ring-1 ring-gray-400 focus:ring-sky-400 focus:bg-sky-50 rounded-md focus:outline-none focus:border-none w-full"
             type="text"
           />
-          <p className="text-xs">Your Litmatch username.</p>
+          <p className="text-xs">Your TikTok username.</p>
         </div>
         <div className="w-full space-y-2">
           <input
@@ -76,8 +76,8 @@ function Login() {
             type="password"
           />
           <p className="text-xs">
-            Your password is your Surname and birthday e.g. delacruz-01-21
-            (MM/DD).
+            Your password is your first name and surname without spaces (small
+            letters).
           </p>
         </div>
 
