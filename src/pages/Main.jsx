@@ -142,11 +142,10 @@ function Main({ memes, standby }) {
             <img src={closeIcon} className="h-6 w-6" alt="" />
           </div>
           <p className="text-sm font-semibold text-red-500">{prompt}</p>
-          <img src={randomSad} className="h-36" alt="sad-melvin" />
+          <img src={randomSad} className="h-36" alt="sad" />
           <div className="px-4 py-8 bg-gray-100 w-full shadow-inner">
             <p className="text-center  font-bold">
-              Hi Roj, kung ang english ng baka ay cow, pwede ba 'kong manligaw?
-              😅
+              Hi Roj! Kung ang english ng baka ay cow.. pwede bang manligaw? 😅
             </p>
           </div>
           <div className="flex justify-center space-x-5 w-full font-bold">
