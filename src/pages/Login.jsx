@@ -76,8 +76,7 @@ function Login() {
             type="password"
           />
           <p className="text-xs">
-            Your password is your first name and surname without spaces (small
-            letters).
+            Your first name and surname without spaces (all small letters).
           </p>
         </div>
 
@@ -85,7 +84,7 @@ function Login() {
           onClick={handleLogin}
           className="transition transform active:scale-105 px-4 py-4 w-full font-semibold text-sky-100 bg-sky-500 uppercase rounded-md text-sm"
         >
-          login
+          Continue
         </button>
       </div>
     </div>

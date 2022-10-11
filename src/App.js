@@ -40,7 +40,7 @@ function App() {
   ];
   return (
     <BrowserRouter>
-      <div className="text-gray-700">
+      <div className="text-gray-700 h-screen w-screen overflow-hidden">
         <Routes>
           <Route exact path="/" element={<Welcome />} />
           <Route path="login" element={<Login />} />

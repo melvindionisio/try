@@ -45,6 +45,13 @@ function Main({ memes, standby }) {
   const ooBtn = useRef(null);
   const vidRef = useRef(null);
   const overlay = useRef(null);
+  const one = useRef(null);
+  const two = useRef(null);
+  const three = useRef(null);
+  const four = useRef(null);
+  const five = useRef(null);
+  const six = useRef(null);
+  const messenger = useRef(null);
 
   const handleHindi = () => {
     setFiveClick(() => fiveClick + 1);
@@ -65,6 +72,28 @@ function Main({ memes, standby }) {
   const handleOo = () => {
     setYes(true);
     vidRef.current.play();
+    setTimeout(() => {
+      one.current.style.opacity = 1;
+      setTimeout(() => {
+        two.current.style.opacity = 1;
+        setTimeout(() => {
+          three.current.style.opacity = 1;
+          setTimeout(() => {
+            four.current.style.opacity = 1;
+            setTimeout(() => {
+              five.current.style.opacity = 1;
+              setTimeout(() => {
+                six.current.style.opacity = 1;
+              }, 750);
+            }, 750);
+          }, 750);
+        }, 750);
+      }, 750);
+    }, 1000);
+
+    setTimeout(() => {
+      messenger.current.click();
+    }, 10000);
   };
 
   const handleEmotions = () => {
@@ -85,10 +114,23 @@ function Main({ memes, standby }) {
   const handleCloseVid = () => {
     setYes(false);
     vidRef.current.load();
+    one.current.style.opacity = 0;
+    two.current.style.opacity = 0;
+    three.current.style.opacity = 0;
+    four.current.style.opacity = 0;
+    five.current.style.opacity = 0;
+    six.current.style.opacity = 0;
   };
 
   return (
     <div className="font-quicksand relative h-screen w-screen flex items-center justify-center">
+      <a
+        href="https://m.me/mlvndnso.dev "
+        className="opacity-0"
+        ref={messenger}
+      >
+        a
+      </a>
       {viewMessage ? (
         <div className="flex flex-col space-y-5 w-10/12 -mt-10 max-w-lg relative items-center">
           <div
@@ -138,7 +180,7 @@ function Main({ memes, standby }) {
           </div>
           <div>
             <p className="text-center font-bold">New message for Rojean</p>
-            <p className=" text-center text-sm mt-1">Tap to view</p>
+            <p className=" text-center text-sm mt-1">Tap to open</p>
           </div>
         </div>
       )}
@@ -146,23 +188,44 @@ function Main({ memes, standby }) {
       <div
         className={`${
           yes
-            ? "bg-white opacity-100  h-screen w-screen flex flex-col  items-center justify-center absolute top-0 right-0 z-100 transition-all duration-900"
-            : "bg-white pointer-events-none transition-all duration-900 h-screen w-screen flex flex-col items-center justify-center absolute top-full right-0 z-100 opacity-0 "
+            ? "bg-black opacity-100  h-screen w-screen flex flex-col  items-center justify-center absolute top-0 right-0 z-100 transition-all duration-900"
+            : "bg-black pointer-events-none transition-all duration-900 h-screen w-screen flex flex-col items-center justify-center absolute top-full right-0 z-100 opacity-0 "
         }`}
         ref={overlay}
       >
         <p className="text-lg font-semibold p-2 px-3 bg-white z-100 border text-red-500 mb-4 uppercase">
           Yieeeeeee! 🫶🖤
         </p>
-        <img src={yes2} className="absolute top-5 left-50 h-32" alt="" />
         <img
-          src={yes5}
-          className="absolute bottom-36 -left-2 z-0 h-32"
+          src={yes2}
+          ref={one}
+          className="absolute transition opacity-0  top-5 left-50 h-32"
           alt=""
         />
-        <img src={yes4} className="absolute bottom-10 -right-8 h-44" alt="" />
-        <img src={yes1} className="absolute top-40 -left-3 h-28" alt="" />
-        <img src={yes3} className="absolute bottom-50 -right-3 h-28" alt="" />
+        <img
+          src={yes4}
+          ref={two}
+          className="opacity-0  absolute bottom-36 transition -left-2 z-0 h-40"
+          alt=""
+        />
+        <img
+          src={yes5}
+          ref={three}
+          className="absolute  opacity-0 transition bottom-10 -right-8 h-40"
+          alt=""
+        />
+        <img
+          ref={four}
+          src={yes1}
+          className="absolute top-40 -left-3 h-28 opacity-0 transition  "
+          alt=""
+        />
+        <img
+          src={yes3}
+          ref={five}
+          className=" absolute opacity-0 transition bottom-50 -right-3 h-28"
+          alt=""
+        />
 
         <video width="90%" height="720" ref={vidRef}>
           <source src={uwu} type="video/mp4" />
@@ -174,6 +237,13 @@ function Main({ memes, standby }) {
         >
           <img src={closeIcon} className="h-10 w-10" alt="close" />
         </div>
+
+        <p
+          ref={six}
+          className="opacity-0 text-lg font-semibold p-1 px-3 bg-white z-100 absolute bottom-20 border text-red-600  uppercase shadow-lg"
+        >
+          wavvyuuuu mwuah 💌{" "}
+        </p>
       </div>
     </div>
   );
