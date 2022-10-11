@@ -237,7 +237,7 @@ function Main({ memes, standby }) {
           alt=""
         />
 
-        <video width="90%" height="720" ref={vidRef}>
+        <video width="720" height="720" ref={vidRef}>
           <source src={uwu} type="video/mp4" />
         </video>
 
