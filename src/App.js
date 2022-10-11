@@ -4,21 +4,21 @@ import Login from "./pages/Login";
 import Main from "./pages/Main";
 
 import standby from "./memes/default.jpeg";
-import meme1 from "./memes/1.png";
-import meme2 from "./memes/2.png";
-import meme3 from "./memes/3.png";
-import meme4 from "./memes/4.png";
-import meme5 from "./memes/5.png";
-import meme6 from "./memes/6.png";
-import meme7 from "./memes/7.png";
-import meme8 from "./memes/8.png";
-import meme9 from "./memes/9.png";
-import meme10 from "./memes/10.png";
-import meme11 from "./memes/11.png";
-import meme12 from "./memes/12.png";
-import meme13 from "./memes/13.png";
-import meme14 from "./memes/14.png";
-import meme15 from "./memes/15.png";
+import meme1 from "./memes/1.jpg";
+import meme2 from "./memes/2.jpg";
+import meme3 from "./memes/3.jpg";
+import meme4 from "./memes/4.jpg";
+import meme5 from "./memes/5.jpg";
+import meme6 from "./memes/6.jpg";
+import meme7 from "./memes/7.jpg";
+import meme8 from "./memes/8.jpg";
+import meme9 from "./memes/9.jpg";
+import meme10 from "./memes/10.jpg";
+import meme11 from "./memes/11.jpg";
+import meme12 from "./memes/12.jpg";
+import meme13 from "./memes/13.jpg";
+import meme14 from "./memes/14.jpg";
+import meme15 from "./memes/15.jpg";
 
 function App() {
   const memes = [

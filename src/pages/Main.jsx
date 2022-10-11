@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import newmess from "../memes/new-mess.jpg";
-import closeIcon from "../memes/close.png";
+import closeIcon from "../memes/close.jpg";
 import arrow from "../memes/click.gif";
 import uwu from "../memes/UwU1.mp4";
 import yes1 from "../memes/yes1.jpg";
@@ -8,7 +8,7 @@ import yes2 from "../memes/yes2.jpg";
 import yes3 from "../memes/yes3.jpg";
 import yes4 from "../memes/yes4.jpg";
 import yes5 from "../memes/yes5.jpg";
-import marry from "../memes/marry.png";
+import marry from "../memes/marry.jpg";
 
 function getWindowSize() {
   const { innerWidth, innerHeight } = window;
