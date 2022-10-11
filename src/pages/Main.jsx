@@ -3,6 +3,11 @@ import newmess from "../memes/new-mess.jpg";
 import closeIcon from "../memes/close.png";
 import arrow from "../memes/click.gif";
 import uwu from "../memes/UwU1.mp4";
+import yes1 from "../memes/yes1.jpg";
+import yes2 from "../memes/yes2.jpg";
+import yes3 from "../memes/yes3.jpg";
+import yes4 from "../memes/yes4.jpg";
+import yes5 from "../memes/yes5.jpg";
 
 function getWindowSize() {
   const { innerWidth, innerHeight } = window;
@@ -39,6 +44,7 @@ function Main({ memes, standby }) {
   const hindiBtn = useRef(null);
   const ooBtn = useRef(null);
   const vidRef = useRef(null);
+  const overlay = useRef(null);
 
   const handleHindi = () => {
     setFiveClick(() => fiveClick + 1);
@@ -75,6 +81,11 @@ function Main({ memes, standby }) {
       setPrompt("");
     }, 5000);
   }, [prompt]);
+
+  const handleCloseVid = () => {
+    setYes(false);
+    vidRef.current.load();
+  };
 
   return (
     <div className="font-quicksand relative h-screen w-screen flex items-center justify-center">
@@ -135,13 +146,34 @@ function Main({ memes, standby }) {
       <div
         className={`${
           yes
-            ? "opacity-100 h-screen w-screen flex items-center justify-center absolute top-0 left-0 z-100"
-            : "pointer-events-none h-screen w-screen flex items-center justify-center absolute top-0 left-0 z-100 opacity-0"
+            ? "bg-white opacity-100  h-screen w-screen flex flex-col  items-center justify-center absolute top-0 right-0 z-100 transition-all duration-900"
+            : "bg-white pointer-events-none transition-all duration-900 h-screen w-screen flex flex-col items-center justify-center absolute top-full right-0 z-100 opacity-0 "
         }`}
+        ref={overlay}
       >
-        <video width="320" height="240" controls ref={vidRef}>
+        <p className="text-lg font-semibold p-2 px-3 bg-white z-100 border text-red-500 mb-4 uppercase">
+          Yieeeeeee! 🫶🖤
+        </p>
+        <img src={yes2} className="absolute top-5 left-50 h-32" alt="" />
+        <img
+          src={yes5}
+          className="absolute bottom-36 -left-2 z-0 h-32"
+          alt=""
+        />
+        <img src={yes4} className="absolute bottom-10 -right-8 h-44" alt="" />
+        <img src={yes1} className="absolute top-40 -left-3 h-28" alt="" />
+        <img src={yes3} className="absolute bottom-50 -right-3 h-28" alt="" />
+
+        <video width="90%" height="720" ref={vidRef}>
           <source src={uwu} type="video/mp4" />
         </video>
+
+        <div
+          className=" active:scale-110 transition transform mt-10 "
+          onClick={handleCloseVid}
+        >
+          <img src={closeIcon} className="h-10 w-10" alt="close" />
+        </div>
       </div>
     </div>
   );
