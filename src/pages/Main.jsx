@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import newmess from "../memes/new-mess.jpg";
 import closeIcon from "../memes/close.jpg";
 import arrow from "../memes/click.gif";
@@ -25,6 +26,8 @@ function Main({ memes, standby }) {
   const [showArrow, setShowArrow] = useState(false);
   const [yes, setYes] = useState(false);
 
+  const navigate = useNavigate();
+
   const [audio] = useState(new Audio(sad));
 
   useEffect(() => {
@@ -37,6 +40,12 @@ function Main({ memes, standby }) {
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/feelings-not-found");
+    }, 5000);
   }, []);
 
   useEffect(() => {

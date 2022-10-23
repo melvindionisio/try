@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Welcome from "./pages/Welcome";
 import Login from "./pages/Login";
 import Main from "./pages/Main";
+import NotFound from "./pages//NotFound";
 
 import standby from "./memes/default.jpeg";
 import meme1 from "./memes/1.jpg";
@@ -44,6 +45,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Welcome />} />
           <Route path="login" element={<Login />} />
+          <Route path="feelings-not-found" element={<NotFound />} />
           <Route
             path="home"
             element={<Main memes={memes} standby={standby} />}
